@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
+// Codespace API endpoint example: https://$CODESPACE_NAME-8000.app.github.dev/api/activities
+const CODESPACE_BASE = process.env.REACT_APP_CODESPACE_NAME ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev` : '';
+
 export default function Activities() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('/api/activities/')
+    fetch(`${CODESPACE_BASE || ''}/api/activities/`)
       .then(r => r.json())
       .then(setData)
       .catch(() => setData([]));
