@@ -1,0 +1,25 @@
+.App {
+  text-align: left;
+}
+
+/* Page container adjustments */
+.App .card {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card-title {
+  margin: 0;
+}
+
+/* Table tweaks */
+.table td, .table th { vertical-align: middle; }
+
+.navbar-brand { font-weight: 600; }
+
+.card p.lead { margin-bottom: 0; }
+
+.container .mb-4 { margin-bottom: 1.5rem; }
+
+.muted-small { font-size: 0.9rem; color: #6c757d; }
+
